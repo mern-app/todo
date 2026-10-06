@@ -1,5 +1,25 @@
 # React + TypeScript + Vite
 
+## GitHub Pages deployment
+
+The site is configured for `https://mern-app.github.io/todo/`. GitHub Pages
+serves the static Vite build from the `gh-pages` branch. No GitHub Actions
+workflow is used.
+
+After cloning, install dependencies and install the local Git hook once:
+
+```sh
+npm install
+npm run setup:deploy-hook
+```
+
+Pushing `main` then builds the site and publishes `dist` to `gh-pages` before
+the `main` push completes. You can also publish manually with `npm run deploy`.
+In the repository settings, set **Pages → Build and deployment → Deploy from a
+branch**, choose `gh-pages` and `/ (root)`, and save.
+
+This publishes the frontend only. GitHub Pages cannot host a Node/Express API.
+
 This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
 
 Currently, two official plugins are available:

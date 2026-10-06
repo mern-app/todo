@@ -1,0 +1,14 @@
+#!/bin/sh
+
+# Publish the built site before accepting pushes to main. Skip gh-pages pushes
+# so the publish command does not recurse into itself.
+while read local_ref local_sha remote_ref remote_sha
+do
+  if [ "$remote_ref" = "refs/heads/main" ]; then
+    echo "Building and publishing GitHub Pages from main..."
+    npm run deploy || exit 1
+    exit 0
+  fi
+done
+
+exit 0
