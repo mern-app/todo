@@ -1,16 +1,15 @@
 // import { useState } from 'react'
-import './App.css'
-import { Todo } from './components/todo'
-
+import "./App.css";
+import { Todo } from "./components/todo";
 
 function App() {
-  // const [count, setCount] = useState(0)
+    // const [count, setCount] = useState(0)
 
-  return (
-    <>
-      <Todo />
-    </>
-  )
+    return (
+        <>
+            <Todo />
+        </>
+    );
 }
 
-export default App
+export default App;

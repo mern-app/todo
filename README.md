@@ -1,5 +1,11 @@
 # React + TypeScript + Vite
 
+## Formatting
+
+Run `npm run format` to format the repository with Prettier, or
+`npm run format:check` to check formatting without changing files. The project
+uses four spaces and ignores generated files and `package-lock.json`.
+
 ## GitHub Pages deployment
 
 The site is configured for `https://mern-app.github.io/todo/`. GitHub Pages
@@ -40,15 +46,18 @@ If you are developing a production application, we recommend enabling type-aware
 
 ```json
 {
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
+    "$schema": "./node_modules/oxlint/configuration_schema.json",
+    "plugins": ["react", "typescript", "oxc"],
+    "options": {
+        "typeAware": true
+    },
+    "rules": {
+        "react/rules-of-hooks": "error",
+        "react/only-export-components": [
+            "warn",
+            { "allowConstantExport": true }
+        ]
+    }
 }
 ```
 
